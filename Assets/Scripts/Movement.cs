@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] float fltMainThrust = 1000;
     Rigidbody rb;
     
     void Start()
@@ -20,7 +21,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rb.AddRelativeForce(Vector3.up);
+            rb.AddRelativeForce(Vector3.up * fltMainThrust * Time.deltaTime);
         }
     }
     void ProcessRotation()

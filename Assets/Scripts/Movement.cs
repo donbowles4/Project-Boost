@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] float fltRotThrust = 1;
     [SerializeField] float fltMainThrust = 1000;
     Rigidbody rb;
     
@@ -28,11 +29,16 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Debug.Log("Rotate Left");
+            ApplyRotation(fltRotThrust);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Debug.Log("Rotate Right");
+            ApplyRotation(-fltRotThrust);
         }
+    }
+
+    void ApplyRotation(float fltRotationThisFrame)
+    {
+        transform.Rotate(Vector3.forward * fltRotationThisFrame * Time.deltaTime);
     }
 }

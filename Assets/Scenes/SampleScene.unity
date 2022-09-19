@@ -499,6 +499,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1741655820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741655812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b236f70777bbcf4f95461511651485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4488446632028600253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -553,6 +565,10 @@ PrefabInstance:
     - target: {fileID: 7949182236502316629, guid: b72903567acd57540a2b06f3b5c5df34, type: 3}
       propertyPath: m_Name
       value: Landing Pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949182236502316629, guid: b72903567acd57540a2b06f3b5c5df34, type: 3}
+      propertyPath: m_TagString
+      value: Finish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b72903567acd57540a2b06f3b5c5df34, type: 3}
@@ -732,6 +748,10 @@ PrefabInstance:
     - target: {fileID: 7457145820351523930, guid: 9ac4def0fa66c2d4baa08e5b6fafa9f1, type: 3}
       propertyPath: m_Name
       value: Launch Pad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457145820351523930, guid: 9ac4def0fa66c2d4baa08e5b6fafa9f1, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ac4def0fa66c2d4baa08e5b6fafa9f1, type: 3}

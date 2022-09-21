@@ -466,14 +466,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1741655819, guid: 4bf5ce0084f56a744ad156543eaac771, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 836776338565469395, guid: 4bf5ce0084f56a744ad156543eaac771, type: 3}
-      propertyPath: mainEngine
-      value: 
-      objectReference: {fileID: 8300000, guid: bbd572d4729b6f141b18678794b88e10, type: 3}
     - target: {fileID: 2587547974820927105, guid: 4bf5ce0084f56a744ad156543eaac771, type: 3}
       propertyPath: m_Name
       value: Rocket

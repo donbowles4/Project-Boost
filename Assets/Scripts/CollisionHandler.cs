@@ -7,13 +7,18 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] AudioClip success;
     [SerializeField] AudioClip crash;
 
+    [SerializeField] ParticleSystem successParticles;
+    [SerializeField] ParticleSystem crashParticles;
     AudioSource audioSource;
+    bool blnIsTransitioning = false;
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
     void OnCollisionEnter(Collision other)
     {
+        if (blnIsTransitioning){return;}
+
         switch (other.gameObject.tag)
         {
             case "Friendly":
@@ -31,12 +36,18 @@ public class CollisionHandler : MonoBehaviour
     }
     void StartSuccessSequence()
     {
+        blnIsTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(success);
+        successParticles.Play();
         GetComponent<Movement>().enabled = false;
     }
     void StartCrashSequence()
     {
+        blnIsTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
+        crashParticles.Play();
         GetComponent<Movement>().enabled = false;
     }
     void LoadNext()

@@ -15,7 +15,7 @@ public class Oscillator : MonoBehaviour
 
     void Update()
     {
-        if(fltPeriod == 0) { return; }
+        if(fltPeriod <= Mathf.Epsilon) { return; }
         float fltCycles = Time.time / fltPeriod; //always growing
 
         const float fltTau = Mathf.PI * 2; //constant value 6.283
